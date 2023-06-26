@@ -1,0 +1,306 @@
+/* ------------------------------狗狗山店------------------------------ */
+/* 距離頂部navbar 150px */
+.firstpag {
+    padding-top: 10vh;
+}
+
+/* ------------------------------狗狗山店介紹------------------------------ */
+.containerpto {
+    position: relative;
+    /* width: 50%; */
+    width: 70vw;
+    /* 置中 */
+    margin: auto;
+}
+
+.imagepto {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle1,
+.middle2,
+.middle3,
+.middle4{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* 圖片變暗 */
+.btn:hover~div .imagepto {
+    filter: brightness(30%);
+}
+
+.ltshbtn0:hover~div .middle1,
+.ltshbtn1:hover~div .middle2,
+.ltshbtn2:hover~div .middle3,
+.ltshbtn3:hover~div .middle4
+{
+opacity: 1;
+}
+
+
+.text {
+    background-color: #274C77;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+
+/* ------------------------------狗山周邊------------------------------ */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.test2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.shell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: grid;
+    grid-template-rows: 500px 200px;
+}
+
+.box {
+    /*  将容器放置在第一行，其高度为第一行的高度 */
+    grid-row: 1 / 2;
+    /*  将容器放置在第一列，其宽度为第一到第八列的宽度 */
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* 设置 3D 转换，以便于创建立体效果 */
+    transform-style: preserve-3d;
+    /* 定义立体效果的观察距离 */
+    perspective: 800px;
+    /*  定义容器内包含的元素数量 */
+    --items: 5;
+    /* 定义容器内居中显示的元素 */
+    --middle: 3;
+    /* 定义容器内当前位置的元素 */
+    --position: 1;
+}
+
+div.item {
+    position: absolute;
+    width: 300px;
+    height: 440px;
+    background-color: #274C77;
+    /* 定义一个 CSS 变量 --r 的值为 var(--position) - var(--offset) */
+    --r: calc(var(--position) - var(--offset));
+    /* 定义变量 --abs 的值为 var(--r) * -1 和 var(--r) 中的最大值 */
+    --abs: max(calc(var(--r) * -1), var(--r));
+    /* 元素的过渡效果为所有属性在 0.25 秒内以线性方式变化 */
+    transition: all 0.25s linear;
+    /* 旋转-10deg*var(--r)角度,并向x轴负方向平移-330px*var(--r) */
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-330px * var(--r)));
+    /* 使当前的图片位于最前面 */
+    z-index: calc((var(--position) - var(--abs)));
+    background-size: cover;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    border: #fff0a4 10px solid;
+    border-radius: 5px;
+}
+
+input {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+.box .item:nth-of-type(1) {
+    --offset: 1;
+    background-image: url(./1.jpg);
+}
+
+.box .item:nth-of-type(2) {
+    --offset: 2;
+    background-image: url(./2.jpg);
+}
+
+.box .item:nth-of-type(3) {
+    --offset: 3;
+    background-image: url(./3.jpg);
+}
+
+.box .item:nth-of-type(4) {
+    --offset: 4;
+    background-image: url(./4.jpg);
+}
+
+.box .item:nth-of-type(5) {
+    --offset: 5;
+    background-image: url(./5.jpg);
+}
+
+input:nth-of-type(1) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+input:nth-of-type(4) {
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+
+input:nth-of-type(5) {
+    grid-column: 6/7;
+    grid-row: 2/3;
+}
+
+input:nth-of-type(1):checked~.box {
+    --position: 1;
+}
+
+input:nth-of-type(2):checked~.box {
+    --position: 2;
+}
+
+input:nth-of-type(3):checked~.box {
+    --position: 3;
+}
+
+input:nth-of-type(4):checked~.box {
+    --position: 4;
+}
+
+input:nth-of-type(5):checked~.box {
+    --position: 5;
+}
+
+/* ----------------------狗山周邊-Coming Soon---------------------- */
+.bgimg {
+    background-image: url('../小專資源/助養/貓屋/LINE_ALBUM_貓屋_220221_6.JPG');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+
+/* ------------------------------愛物園------------------------------ */
+* {
+    box-sizing: border-box;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row>.column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none;
+    /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.lovcontent {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.lovbtn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.lovbtn:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.lovbtn.active {
+    background-color: #666;
+    color: white;
+}
+
+/* 離footer的距離，要設在最靠近footer的頁面 */
+/* 設定包含整個內容的div，會距離底部100px */
+.homehead {
+    padding-bottom: 100px;
+}

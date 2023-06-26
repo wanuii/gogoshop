@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓狗助養</title>
+    <!-- 根據文件，加入所需的css樣式檔案 -->
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <!-- navbar與footer相關的css設定 -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <!-- 截圖套件 -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- support相關的css設定 -->
+    <link rel="stylesheet" href="./support.css">
+
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        /* 離footer的距離，要設在最靠近footer的頁面 */
+        /* 設定包含整個內容的div，會距離底部100px */
+        .homehead {
+            padding-bottom: 100px;
+        }
+
+        /* 距離頂部navbar 150px */
+        .firstpag {
+            padding-top: 10vh;
+        }
+    </style>
+    <style type="text/css">
+        * {
+            cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat979.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat979.gif), auto !important;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrapper content container homehead" style="margin-top: 0px; width: 100%;">
+        <!-- navbar 置頂選單部分設定 -->
+        <div class="fixed-top">
+            <!-- Nav相關設定，例如Nav底色 -->
+            <nav class="navbar navbar-expand-lg ti navbar-light" style="background-color: #fff3b9;">
+                <div class="container-fluid justify-content-lg-end">
+                    <div class="container-fluid justify-content-lg-center" style="width: 20%;">
+                        <a class="navbar-brand" href="./HW_home.html"><img src="../小專資源/logo.svg"
+                                style="height: 5vh;"></a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <div class="containerbtn" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+                    <script>
+                        function myFunction(x) {
+                            x.classList.toggle("change");
+                        }
+                    </script>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100%;">
+                            <li class="nav-item">
+                                <a class="mx-2 nav-link" href="./HW_AboutUs.html">關於我們</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="mx-2 nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    狗狗山店
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <a class="dropdown-item" href="./HW_shop.html">商店一覽</a>
+                                    <a class="dropdown-item" href="./HW_shop.html">狗山周邊</a>
+                                    <a class="dropdown-item" href="./HW_shop.html">愛物園</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="mx-2 nav-link" href="./HW_support.html">貓狗助養</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="mx-2 nav-link" href="./HW_cooperate.html">合作店家</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar 置頂選單部分設定結束 -->
+        </div>
+
+        <!----------------------------------- 網頁內容 ----------------------------------->
+
+        <!------------------------------- 貓狗助養 ------------------------------->
+
+        <div class="firstpag" id="shoptwo">
+
+            <div id="myBtnContainer">
+                <button class="lovbtn active" onclick="filterSelection('all')">全部</button>
+                <button class="lovbtn" onclick="filterSelection('cats')">貓咪</button>
+                <button class="lovbtn" onclick="filterSelection('dogs')">狗狗</button>
+                <button class="lovbtn" onclick="filterSelection('illustrate')">助養說明</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column cats">
+                    <div class="lovcontent" id="capture">
+                        <img src="../小專資源/助養/貓屋/20220313_152713(0).jpg" alt="Mountains" style="width:100%">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>公主</h4>
+                                <p>5歲 女生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column cats">
+                    <div class="lovcontent" id="capture2">
+                        <img src="../小專資源/助養/貓屋/20220313_155200.jpg" alt="Lights" style="width:100%">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>小摺</h4>
+                                <p>4歲 女生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture2()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show2" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column cats">
+                    <div class="lovcontent" id="capture3">
+                        <img src="../小專資源/助養/貓屋/20220313_155513.jpg" alt="Nature" style="width:100%">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>八一</h4>
+                                <p>3歲 女生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture3()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show3" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column cats">
+                    <div class="lovcontent" id="capture4">
+                        <img src="../小專資源/助養/貓屋/20220313_154651.jpg" alt="Nature" style="width:100%">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>月月</h4>
+                                <p>3歲 女生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture4()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show4" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column dogs">
+                    <div class="lovcontent" id="capture5">
+                        <img src="../小專資源/助養/P1090958.JPG" alt="Car" style="width:100%">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>憨吉</h4>
+                                <p>6歲 男生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture5()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show5" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column dogs">
+                    <div class="lovcontent" id="capture6">
+                        <img src="../小專資源/助養/P1090907.jpg" alt="Car" style="width:100%">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>白白</h4>
+                                <p>5歲 女生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture6()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show6" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column dogs">
+                    <div class="lovcontent" id="capture7">
+                        <img src="../小專資源/助養/P1100007.jpg" alt="Car" style="width:100%">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>咖啡</h4>
+                                <p>6歲 男生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture7()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show7" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column dogs">
+                    <div class="lovcontent" id="capture8">
+                        <img src="../小專資源/助養/P1100050.jpg" alt="Car" style="width:100%">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>阿雄</h4>
+                                <p>8歲 女生</p>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button onclick="block_capture8()" class="morepic">下載資料</button>
+                            </div>
+                            <div class="col-3" style="margin: auto;">
+                                <button id="show8" class="morepic">更多照片</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column illustrate">
+                    <div class="lovcontent containerpto" style="position: relative; overflow: auto;">
+                        <img src="../小專資源/助養/貓屋/20220313_153416.jpg" alt="Avatar" class="imagepto" style="width:100%">
+                        <div class="middle">
+                            <div class="text">
+                                1.挑選想助養的毛孩<br>
+                                2.下載想助養的毛孩資料<br>
+                                3.私訊狗狗山FB通知負責人
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="" style="text-align: center; margin: auto; padding: 2vh;">
+                    <button class="btn-52" style="margin: auto;">
+                        <div class="original">查看更多照片</div>
+                        <div class="letters" id="show9">
+                            <!-- Place each letter in its own element -->
+                            <span>查</span>
+                            <span>看</span>
+                            <span>更</span>
+                            <span>多</span>
+                            <span>照</span>
+                            <span>片</span>
+                        </div>
+                    </button>
+                </div>
+
+
+
+                <!-- END GRID -->
+            </div>
+
+            <!-- ----------------------- dialog - HTML ----------------------- -->
+            <dialog id="infoModal">
+                <button id="close">X</button>
+                <div class=”webpage”>
+                    <iframe src=" " width="854" height="480" frameborder="0" style="border:0" id="diafr"></iframe>
+                </div>
+            </dialog>
+
+
+            <!-- JS -->
+            <script>
+                // -----------------------照片篩選-----------------------
+
+                filterSelection("all") // Execute the function and show all columns
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("column");
+                    if (c == "all") c = "";
+                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                }
+
+                // Show filtered elements
+                function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
+                        }
+                    }
+                }
+
+                // Hide elements that are not selected
+                function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                }
+
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("lovbtn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function () {
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                }
+
+                // -----------------------截圖-----------------------
+                function block_capture() {
+                    html2canvas(document.querySelector("#capture")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture2() {
+                    html2canvas(document.querySelector("#capture2")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture3() {
+                    html2canvas(document.querySelector("#capture3")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture4() {
+                    html2canvas(document.querySelector("#capture4")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture5() {
+                    html2canvas(document.querySelector("#capture5")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture6() {
+                    html2canvas(document.querySelector("#capture6")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture7() {
+                    html2canvas(document.querySelector("#capture7")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                function block_capture8() {
+                    html2canvas(document.querySelector("#capture8")).then(function (canvas) {
+                        a = document.createElement("a");
+                        a.href = canvas
+                            .toDataURL("image/jpeg", 0.92)
+                            .replace("image/jpeg", "image/octet-stream");
+                        a.download = "image.jpg";
+                        a.click();
+                    });
+                }
+                // ------------------------------------------------------------
+                
+
+
+                // -----------------------dialog事件-----------------------
+                let btn = document.querySelector("#show");
+                let infoModal = document.querySelector("#infoModal");
+                let close = document.querySelector("#close");
+                btn.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto1.html';
+                    infoModal.showModal();
+                })
+                close.addEventListener("click", function () {
+                    infoModal.close();
+                })
+                // ------------------------------------------------------------
+                let btn2 = document.querySelector("#show2");
+                btn2.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto2.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn3 = document.querySelector("#show3");
+                btn3.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto3.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn4 = document.querySelector("#show4");
+                btn4.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto4.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn5 = document.querySelector("#show5");
+                btn5.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto5.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn6 = document.querySelector("#show6");
+                btn6.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto6.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn7 = document.querySelector("#show7");
+                btn7.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto7.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn8 = document.querySelector("#show8");
+                btn8.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto8.html';
+                    infoModal.showModal();
+                })
+                // ------------------------------------------------------------
+                let btn9 = document.querySelector("#show9");
+                btn9.addEventListener("click", function () {
+                    diafr.src = '../00_lab/SPGroup/SlidePhoto9.html';
+                    infoModal.showModal();
+                })
+
+
+            </script>
+
+        </div>
+
+    </div>
+</body>
+
+
+<!-- footer -->
+<footer class="footer">Copyright © 2023 GouGouSuan. All rights reserved.</footer>
+<!-- footer結束 -->
+
+</html>
