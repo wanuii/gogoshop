@@ -1,0 +1,110 @@
+/* 漢堡 */
+.containerbtn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+
+body {
+    /* background-color: #fffbd2; */
+    background-color: #B8CDDC;
+}
+
+i {
+    font-size: 35px;
+}
+
+/* Navbar字體大小 */
+li {
+    font-size: 16px;
+
+}
+
+i:hover {
+    color: white;
+}
+
+li:hover {
+    color: white;
+    border-bottom: 3px solid rgb(255, 153, 28);
+}
+
+/* nav {
+    background-color: #fffdf5;
+} */
+/* Navbar大小 */
+.ti {
+    height: 30%;
+}
+
+/* 下拉式選單底色 */
+.dropdown-menu {
+    background-color: #fffbd2;
+}
+
+.dropdown-item {
+    color: #ffa851;
+}
+
+.dropdown-item:hover {
+    color: #ff7300;
+}
+
+.dropdown-item:active {
+    background-color: #fff3b9;
+}
+
+/* footer CSS設定*/
+
+html,
+body {
+    height: 100%;
+    /*外層高度100%*/
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    /*外層高度100%*/
+    margin-bottom: -50px;
+    /*隨footer高度需做調整*/
+}
+
+.contant {
+    padding-bottom: 50px;
+    /*避免文字超出瀏覽器時，內容區塊不會和footer打架*/
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    height: 50px;
+    /*設定footer本身高度*/
+    background-color: #fff0a4;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* ------------------------------------------------- */

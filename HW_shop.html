@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狗狗山店</title>
+    <!-- 根據文件，加入所需的css樣式檔案 -->
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <!-- navbar與footer相關的css設定 -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- shop相關的css設定 -->
+    <link rel="stylesheet" href="./shop.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        /* 離footer的距離，要設在最靠近footer的頁面 */
+        /* 設定包含整個內容的div，會距離底部100px */
+        .homehead {
+            padding-bottom: 100px;
+        }
+
+        .gdtext {
+            color: #402d2d;
+            /* font-weight: 800;
+            letter-spacing: 0.5em; */
+        }
+
+        .badge-notify {
+            background: red;
+            position: relative;
+            top: -20px;
+            right: 10px;
+        }
+
+        /* .my-cart-icon-affix {
+            position: fixed;
+            z-index: 999;
+        } */
+
+        .position_fixed {
+            position: fixed;
+            /* border: solid 5px rgb(117, 175, 24); */
+            background-color: #fff3b9;
+            right: 0;
+            bottom: 50px;
+        }
+    </style>
+    <style type="text/css">
+        * {
+            cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat979.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat979.gif), auto !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="wrapper content container homehead" style="margin-top: 0px; width: 100%;">
+        <!-- navbar 置頂選單部分設定 -->
+        <div class="fixed-top">
+            <!-- Nav相關設定，例如Nav底色 -->
+            <nav class="navbar navbar-expand-lg ti navbar-light" style="background-color: #fff3b9;">
+                <div class="container-fluid justify-content-lg-end">
+                    <div class="container-fluid justify-content-lg-center" style="width: 20%;">
+                        <a onclick="gohome()" class="navbar-brand"><img src="../小專資源/logo.svg" style="height: 5vh;"></a>
+                        <!-- <a class="navbar-brand" href="./HW_home.html"><img src="../小專資源/logo.svg"
+                                style="height: 5vh;"></a> -->
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <div class="containerbtn" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+                    <script>
+                        function myFunction(x) {
+                            x.classList.toggle("change");
+                        }
+                    </script>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100%;">
+                            <li class="nav-item">
+                                <a onclick="goAboutUs()" class="mx-2 nav-link">關於我們</a>
+                                <!-- <a class="mx-2 nav-link" href="./HW_AboutUs.html">關於我們</a> -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="mx-2 nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    狗狗山店
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <a class="dropdown-item" href="#">商店一覽</a>
+                                    <a class="dropdown-item" href="#shopone">狗山周邊</a>
+                                    <a class="dropdown-item" href="#shoptwo">愛物園</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a onclick="gosupport()" class="mx-2 nav-link">貓狗助養</a>
+                                <!-- <a class="mx-2 nav-link" href="./HW_support.html">貓狗助養</a> -->
+                            </li>
+                            <li class="nav-item">
+                                <a onclick="gocooperate()" class="mx-2 nav-link">合作店家</a>
+                                <!-- <a class="mx-2 nav-link" href="./HW_cooperate.html">合作店家</a> -->
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar 置頂選單部分設定結束 -->
+        </div>
+
+        <!----------------------------------- 網頁內容 ----------------------------------->
+
+        <!------------------------------- TOP狗狗山店導覽 ------------------------------->
+        <div class="firstpag">
+            <h1 class="gdtext">狗狗山店
+                <a href="#" type="button" class="btn btn-outline-secondary ltshbtn0">關於商店</a>
+                <a href="#shopone" type="button" class="btn btn-outline-secondary ltshbtn1">狗山周邊</a>
+                <a href="#shoptwo" type="button" class="btn btn-outline-secondary ltshbtn2">愛物園</a>
+                <a href="#" type="button" class="btn btn-outline-secondary ltshbtn3">購物說明</a>
+
+                <div class="containerpto">
+                    <img src="../小專資源/助養/商店首圖.jpg" alt="Avatar" class="imagepto" style="width:100%">
+                    <div class="middle1">
+                        <div class="text">狗狗山店分成兩區<br>一區專門賣狗山周邊，一區當作愛物園網路二手商店使用</div>
+                    </div>
+                    <div class="middle2">
+                        <div class="text">狗山周邊<br>販賣由狗山志工團隊經由多次開會調整，步步謹慎合作出來的狗山相關周邊</div>
+                    </div>
+                    <div class="middle3">
+                        <div class="text">愛物園<br>販賣愛物園二手商店內的物品</div>
+                    </div>
+                    <div class="middle4">
+                        <div class="text">購物說明<br>加入購物車的東西會以郵件方式寄送訂單，屆時請務必填寫基本資料</div>
+                    </div>
+                </div>
+            </h1>
+        </div>
+        <!------------------------------- TOP狗狗山店導覽結束 ------------------------------->
+        <br>
+        <hr>
+        <br>
+        <!------------------------------- 狗山周邊 ------------------------------->
+        <div id="shopone">
+            <h1 class="gdtext">狗山周邊</h1>
+            <div class="test2">
+                <div class="shell">
+                    <input type="radio" name="position">
+                    <input type="radio" name="position">
+                    <input type="radio" name="position" checked>
+                    <input type="radio" name="position">
+                    <input type="radio" name="position">
+                    <div class="box">
+                        <div class="item"><img src="../小專資源/狗山周邊/狗山年曆.jpg" style="width: 100%;" class=""></div>
+                        <div class="item"><img src="../小專資源/狗山周邊/酒精瓶.jpg" style="width: 100%;" class=""></div>
+                        <div class="item"><img src="../小專資源/狗山周邊/狗山年曆.jpg" style="width: 100%;" class=""></div>
+                        <div class="item"><img src="../小專資源/狗山周邊/酒精瓶.jpg" style="width: 100%;" class=""></div>
+                        <div class="item">
+                            <div class="bgimg">
+                                <div class="middle">
+                                    <h1>敬請期待</h1>
+                                    <hr>
+                                    <p id="demo" style="font-size:30px"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+            // Update the count down every 1 second
+            var countdownfunction = setInterval(function () {
+
+                // Get todays date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now an the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in an element with id="demo"
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(countdownfunction);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+
+        <!------------------------------- 狗山周邊結束 ------------------------------->
+
+
+
+        <br>
+        <hr>
+        <br>
+
+        <!------------------------------- 愛物園 ------------------------------->
+
+        <!-- 按下按鈕後將某物移至指定地點 : https://www.w3schools.com/howto/howto_js_animate.asp -->
+        <div class="" id="shoptwo">
+            <h1 class="gdtext">愛物園</h1>
+            <div id="myBtnContainer">
+                <button class="lovbtn active" onclick="filterSelection('all')"> 全部</button>
+                <button class="lovbtn" onclick="filterSelection('nature')"> 精選</button>
+                <button class="lovbtn" onclick="filterSelection('cars')"> 衣著</button>
+                <button class="lovbtn" onclick="filterSelection('people')"> 其他</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column nature">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/P11002032.JPG" alt="Mountains" style="width:100%">
+                        <div class="row">
+                            <div class="col">
+                                <h4>水壺-紫</h4>
+                                NT<strong>$50</strong>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-danger my-cart-btn" data-id="1" data-name="水壺-紫"
+                                    data-summary="summary 1" data-price="50" data-quantity="1"
+                                    data-image="../小專資源/愛物園/P11002032.JPG">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column nature">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/P11002112.JPG" alt="Lights" style="width:100%">
+                        <div class="row">
+                            <div class="col">
+                                <h4>白色遮陽帽</h4>
+                                NT<strong>$80</strong>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-danger my-cart-btn" data-id="2" data-name="白色遮陽帽"
+                                    data-summary="summary 2" data-price="80" data-quantity="1"
+                                    data-image="../小專資源/愛物園/P11002112.JPG">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column nature">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/P11002202.JPG" alt="Nature" style="width:100%">
+                        <div class="row">
+                            <div class="col">
+                                <h4>掛布</h4>
+                                NT<strong>$250</strong>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-danger my-cart-btn" data-id="3" data-name="掛布"
+                                    data-summary="summary 3" data-price="250" data-quantity="1"
+                                    data-image="../小專資源/愛物園/P11002202.JPG">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column cars">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/01.jpg" alt="Car" style="width:100%">
+          
+                        <div class="row">
+                            <div class="col">
+                        <h4>粉色花襯衫</h4>
+                        三件 NT<strong>$50</strong>
+                        </div>
+                        <div class="col">
+                        <button class="btn btn-danger my-cart-btn" data-id="4" data-name="粉色花襯衫" data-summary="summary 4"
+                        data-price="50" data-quantity="1" data-image="../小專資源/愛物園/01.jpg">加入購物車</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/02.jpg" alt="Car" style="width:100%">
+                 
+                        <div class="row">
+                            <div class="col">
+                        <h4>條紋上衣</h4>
+                        三件 NT<strong>$50</strong>
+                        </div>
+                        <div class="col">
+                        <button class="btn btn-danger my-cart-btn" data-id="5" data-name="條紋上衣" data-summary="summary 5"
+                        data-price="50" data-quantity="1" data-image="../小專資源/愛物園/02.jpg">加入購物車</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/03.jpg" alt="Car" style="width:100%">
+                 
+                        <div class="row">
+                            <div class="col">
+                        <h4>白色短褲</h4>
+                        三件 NT<strong>$50</strong>
+                        </div>
+                        <div class="col">
+                        <button class="btn btn-danger my-cart-btn" data-id="6" data-name="白色短褲" data-summary="summary 6"
+                        data-price="50" data-quantity="1" data-image="../小專資源/愛物園/03.jpg">加入購物車</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/04.jpg" alt="Car" style="width:100%">
+                        
+                        <div class="row">
+                            <div class="col">
+                        <h4>米色長褲</h4>
+                        三件 NT<strong>$50</strong>
+                        </div>
+                        <div class="col">
+                        <button class="btn btn-danger my-cart-btn" data-id="7" data-name="米色長褲" data-summary="summary 7"
+                        data-price="50" data-quantity="1" data-image="../小專資源/愛物園/04.jpg">加入購物車</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="column people">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/oth01.png" alt="People" style="width:100%">
+                     
+                        <div class="row">
+                            <div class="col">
+                        <h4>陶瓷碗</h4>
+                        NT<strong>$120</strong>
+                        </div>
+                        <div class="col">
+                        <button class="btn btn-danger my-cart-btn" data-id="8" data-name="陶瓷碗" data-summary="summary 8"
+                        data-price="120" data-quantity="1" data-image="../小專資源/愛物園/oth01.png">加入購物車</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/oth02.png" alt="People" style="width:100%">
+                 
+                        <div class="row">
+                            <div class="col">
+                        <h4>短靴</h4>
+                        NT<strong>$150</strong>
+                        </div>
+                        <div class="col">
+                        <button class="btn btn-danger my-cart-btn" data-id="9" data-name="短靴" data-summary="summary 9"
+                        data-price="150" data-quantity="1" data-image="../小專資源/愛物園/oth02.png">加入購物車</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="lovcontent">
+                        <img src="../小專資源/愛物園/P11002172.JPG" alt="People" style="width:100%">
+                        <div class="row">
+                            <div class="col">
+                                <h4>貓咪陶瓷杯-藍</h4>
+                                <!-- <p>NT$60</p> -->
+                                NT<strong>$60</strong>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-danger my-cart-btn" data-id="10" data-name="貓咪陶瓷杯-藍"
+                                    data-summary="summary 10" data-price="60" data-quantity="1"
+                                    data-image="../小專資源/愛物園/P11002172.JPG">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END GRID -->
+            </div>
+
+            <!-- JS -->
+            <script>
+
+                filterSelection("all") // Execute the function and show all columns
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("column");
+                    if (c == "all") c = "";
+                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                }
+
+                // Show filtered elements
+                function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
+                        }
+                    }
+                }
+
+                // Hide elements that are not selected
+                function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                }
+
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("lovbtn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function () {
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                }
+            </script>
+
+        </div>
+
+
+        <!------------------------------- 愛物園結束 ------------------------------->
+
+        <!----------------------------------- 網頁內容結束 ----------------------------------->
+        <!-- 離開該網頁時會跳出提示，離開網頁將清空購物車 -->
+        <script>
+            function gohome() {
+                var result = confirm("注意 ! 離開此頁面將清空購物車");
+                if (result == true) {
+                    document.location.href = "./HW_home.html";
+                }
+            }
+            function goAboutUs() {
+                var result = confirm("注意 ! 離開此頁面將清空購物車");
+                if (result == true) {
+                    document.location.href = "./HW_AboutUs.html";
+                }
+            }
+            function gosupport() {
+                var result = confirm("注意 ! 離開此頁面將清空購物車");
+                if (result == true) {
+                    document.location.href = "./HW_support.html";
+                }
+            }
+            function gocooperate() {
+                var result = confirm("注意 ! 離開此頁面將清空購物車");
+                if (result == true) {
+                    document.location.href = "./HW_cooperate.html";
+                }
+            }
+        </script>
+        <div class="page-header">
+                <div style="float: right; cursor: pointer;" class="position_fixed">
+                    <i class="mx-3 bi bi-cart3 my-cart-icon">
+                        <span class="badge badge-notify my-cart-badge"></span>
+                    </i>
+                </div>
+        </div>
+
+    
+
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script type='text/javascript' src="js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="js/jquery.mycart.js"></script>
+        <script type="text/javascript">
+            $(function () {
+
+                var goToCartIcon = function ($addTocartBtn) {
+                    var $cartIcon = $(".my-cart-icon");
+                    var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+                    $addTocartBtn.prepend($image);
+                    var position = $cartIcon.position();
+                    $image.animate({
+                        top: position.top,
+                        left: position.left
+                    }, 500, "linear", function () {
+                        $image.remove();
+                    });
+                }
+
+                $('.my-cart-btn').myCart({
+                    currencySymbol: '$',
+                    classCartIcon: 'my-cart-icon',
+                    classCartBadge: 'my-cart-badge',
+                    classProductQuantity: 'my-product-quantity',
+                    classProductRemove: 'my-product-remove',
+                    classCheckoutCart: 'my-cart-checkout',
+                    affixCartIcon: true,
+                    showCheckoutModal: true,
+                    numberOfDecimals: 2,
+                    cartItems:
+                        [
+                            // { id: 1, name: 'product 1', summary: 'summary 1', price: 10, quantity: 1, image: 'images/img_1.png' },
+                            // { id: 2, name: 'product 2', summary: 'summary 2', price: 20, quantity: 2, image: 'images/img_2.png' },
+                            // { id: 3, name: 'product 3', summary: 'summary 3', price: 30, quantity: 1, image: 'images/img_3.png' }
+                        ],
+                    clickOnAddToCart: function ($addTocart) {
+                        goToCartIcon($addTocart);
+                    },
+                    afterAddOnCart: function (products, totalPrice, totalQuantity) {
+                        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+                    },
+                    clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+                        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+                    },
+                    checkoutCart: function (products, totalPrice, totalQuantity) {
+                        var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+                        checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+                        $.each(products, function () {
+                            checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+                        });
+                        alert(checkoutString)
+                        console.log("checking out", products, totalPrice, totalQuantity);
+                    },
+
+                });
+
+            });
+        </script>
+
+    </div>
+</body>
+
+
+<!-- footer -->
+<footer class="footer">Copyright © 2023 GouGouSuan. All rights reserved.</footer>
+<!-- footer結束 -->
+
+</html>
